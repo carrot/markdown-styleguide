@@ -1,5 +1,4 @@
 # Style Guidelines: Markdown
-
 This document contains formatting standards for creating readable, consistent
 files using Markdown.
 
@@ -12,29 +11,55 @@ Being a masochist, I of course decided to create a guideline I could follow
 which would produce decent looking output without looking stupid in vim.
 
 ## Basic conventions for Markdown files
-
   * Wrap all lines at 80 characters.
   * Denote **bold** text using the asterisk format: `**bold text**`.
   * Denote _italic_ text using the underscore format: `_emphasized text_`.
-  * Force a linebreak by ending a line with two spaces, no more.
+  * Never leave trailing whitespace. Force linebreaks by using a blank line
+    between paragraphs, not trailing spaces (it's much easier to read in an
+    editor anyway).
+  * End files with a newline (see [this
+    explanation](http://robots.thoughtbot.com/no-newline-at-end-of-file)).
+  * Never use consecutive blank lines outside of code samples. A single blank
+    line is always enough in Markdown.
 
 ## Headings
-
   * Header text must use the `atx-style` with no closing `#` character.
-  * Include a space between the `#` and the text of the Header^[1](#1).
+  * Include a single space between the `#` and the text of the Header^[1](#1).
 
     ```
     # Header 1
+
     ## Header 2
+
     ### Header 3
     ```
 
   * Headers spanning more than 80 characters should be re-evaluated.
-  * Headers must be preceded and followed by a newline except at the beginning
-    of a file.
+  * Headers must be preceded a newline except at the beginning of a file.
+  * Headers should not be followed by a newline unless the element following
+    it requires a preceding newline
+  * The first header in a file should be an `h1`.
+  * Headers should never increase by more than one "level" from one header to
+    the next. Think of higher-level headers as though they are nested within
+    their parent, forming a hierarchy like the Table of Contents.
+
+    ```
+    This is wrong.
+
+    # Header 1
+
+    ### Header 3
+    ```
+
+    ```
+    This is correct.
+
+    # Header 1
+
+    ## Header 2
+    ```
 
 ## Lists
-
   * **List items** must be indented 2 spaces further than their parent.
 
     ```
@@ -69,7 +94,6 @@ which would produce decent looking output without looking stupid in vim.
     ```
 
 ## Code
-
   * **Inline code** must use single backticks and must not have spaces between
     the backtick characters and the code.
 
@@ -98,9 +122,11 @@ which would produce decent looking output without looking stupid in vim.
     There is a newline above this paragraph because it is both the end of a
     list and because it follows a fenced code block.
     ```
+  * As long as the parser supports it; code blocks should not be denoted with
+    indentation. Using back-ticks is much more explicit than 4 spaces or 1
+    tab.
 
 ## Tables
-
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra
 which seems to be pretty widely implemented.
 
@@ -127,7 +153,6 @@ which seems to be pretty widely implemented.
   * Tables must always be preceded and followed by newlines.
 
 ### Table example:
-
 _This table meets all the criteria:_
 
 ```
@@ -138,7 +163,7 @@ Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 ```
 
-_A handsome table in pre-processed markdown is also handsome when rendered:_
+_A handsome table in pre-processed Markdown is also handsome when rendered:_
 
 Group                     | Domain          | First Appearance
 ------------------------- | --------------- | ----------------
@@ -148,7 +173,6 @@ Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 
 ## Footnotes
-
   1. This is enforced locally through redcarpet2's configuration:
      `:space_after_headers`.
      <a name="1"><a>
