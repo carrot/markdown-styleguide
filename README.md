@@ -1,18 +1,12 @@
 # Markdown Style Guide
-This document contains formatting standards for creating readable, consistent
-files using Markdown - without wasting time changing formatting.
+This document contains formatting standards for creating readable, consistent files using Markdown - without wasting time changing formatting.
 
 ## Basic conventions for Markdown files
-  * Wrap all lines at 80 characters.
   * Denote **bold** text using the asterisk format: `**bold text**`.
   * Denote _italic_ text using the underscore format: `_emphasized text_`.
-  * Never leave trailing whitespace. Force linebreaks by using a blank line
-    between paragraphs, not trailing spaces (it's much easier to read in an
-    editor anyway).
-  * End files with a newline (see [this
-    explanation](http://robots.thoughtbot.com/no-newline-at-end-of-file)).
-  * Never use consecutive blank lines outside of code samples. A single blank
-    line is always enough in Markdown.
+  * Never leave trailing whitespace. Force linebreaks by using a blank line between paragraphs, not trailing spaces (it's much easier to read in an editor anyway).
+  * End files with a newline (see [this explanation](http://robots.thoughtbot.com/no-newline-at-end-of-file)).
+  * Never use consecutive blank lines outside of code samples. A single blank line is always enough in Markdown.
 
 ## Headings
   * Header text must use the `atx-style` with no closing `#` character.
@@ -28,12 +22,9 @@ files using Markdown - without wasting time changing formatting.
 
   * Headers spanning more than 80 characters should be re-evaluated.
   * Headers must be preceded a newline except at the beginning of a file.
-  * Headers should not be followed by a newline unless the element following
-    it requires a preceding newline
+  * Headers should not be followed by a newline unless the element following it requires a preceding newline
   * The first header in a file should be an `h1`.
-  * Headers should never increase by more than one "level" from one header to
-    the next. Think of higher-level headers as though they are nested within
-    their parent, forming a hierarchy like the Table of Contents.
+  * Headers should never increase by more than one "level" from one header to the next. Think of higher-level headers as though they are nested within their parent, forming a hierarchy like the Table of Contents.
 
     ```
     This is wrong.
@@ -77,17 +68,8 @@ files using Markdown - without wasting time changing formatting.
     This is text of any kind that follows a list.
     ```
 
-  * List item lines exceeding 80 characters should, when wrapped, align
-    vertically with the beginning of the preceding line's text.
-
-    ```
-      * Large, avian creatures, chocobos roughly act as the equivalent of
-        horses, being domesticated for use as mounts...
-    ```
-
 ## Code
-  * **Inline code** must use single backticks and must not have spaces between
-    the backtick characters and the code.
+  * **Inline code** must use single backticks and must not have spaces between the backtick characters and the code.
 
     ```
     # Bad
@@ -98,8 +80,7 @@ files using Markdown - without wasting time changing formatting.
     ```
 
   * **Fenced code blocks** must be preceded and followed by a newline.
-  * When used inside _list items_, **fenced code blocks** must be indented as
-    if they were one level deeper that the list item that contains them.
+  * When used inside _list items_, **fenced code blocks** must be indented as if they were one level deeper that the list item that contains them.
 
     ```
       * This list item contains a fenced code block.
@@ -111,16 +92,13 @@ files using Markdown - without wasting time changing formatting.
         }
         ```
 
-    There is a newline above this paragraph because it is both the end of a
-    list and because it follows a fenced code block.
+    There is a newline above this paragraph because it is both the end of a list and because it follows a fenced code block.
     ```
-  * As long as the parser supports it; code blocks should not be denoted with
-    indentation. Using back-ticks is much more explicit than 4 spaces or 1
-    tab.
+
+  * As long as the parser supports it; code blocks should not be denoted with indentation. Using back-ticks is much more explicit than 4 spaces or 1 tab.
 
 ## Tables
-Like fenced code blocks, tables in Markdown are provided by Markdown Extra
-which seems to be pretty widely implemented.
+Like fenced code blocks, tables in Markdown are provided by Markdown Extra which seems to be pretty widely implemented.
 
   * Pipe characters must be preceded and followed by spaces for readability.
   * Table column width should be determined by the longest cell in the column.
