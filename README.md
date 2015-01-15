@@ -42,6 +42,13 @@ This document contains formatting standards for creating readable, consistent fi
   ## Header 2
   ```
 
+## Horizontal Rules
+The convention for horizontal rules in this style guide is to use hyphens (instead of asterisks or underscores). Horizontal rules should span 80 characters for readability.
+
+```
+--------------------------------------------------------------------------------
+```
+
 ## Lists
 - Unordered lists are denoted with a `- ` (a hyphen and a space). Hyphens tend to be consistent across monospace fonts (being displayed at half of the line height) and seem to be the most common "list character" anyway.
 - Nested list items must be indented 2 spaces further than their parent.
