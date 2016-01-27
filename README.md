@@ -149,6 +149,4 @@ Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 ## Footnotes
-  <a name="1"><a>
-  1. This is enforced locally through redcarpet2's configuration: `:space_after_headers`.
-
+1. <a name="1"></a> This is enforced locally through redcarpet2's configuration: `:space_after_headers`.
