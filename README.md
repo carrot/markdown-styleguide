@@ -106,7 +106,7 @@ The convention for horizontal rules in this style guide is to use hyphens (inste
 - As long as the parser supports it; code blocks should not be denoted with indentation. Using back-ticks is much more explicit than 4 spaces or 1 tab.
 
 ## Tables
-Like fenced code blocks, tables in Markdown are provided by Markdown Extra which seems to be pretty widely implemented.
+Like fenced code blocks, tables in Markdown are provided by [Markdown Extra](https://en.wikipedia.org/wiki/Markdown_Extra) which seems to be pretty widely implemented.
 
 - Pipe characters must be preceded and followed by spaces for readability.
 - Table column width should be determined by the longest cell in the column.
