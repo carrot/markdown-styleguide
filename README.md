@@ -1,7 +1,9 @@
 # Markdown Style Guide
+
 This document contains formatting standards for creating readable, consistent files using Markdown - without wasting time changing formatting.
 
 ## Basic conventions for Markdown files
+
 - Denote **bold** text using the asterisk format: `**bold text**`.
 - Denote _italic_ text using the underscore format: `_emphasized text_`.
 - Never leave trailing whitespace. Force linebreaks by using a blank line between paragraphs, not trailing spaces (it's much easier to read in an editor anyway).
@@ -9,6 +11,7 @@ This document contains formatting standards for creating readable, consistent fi
 - Never use consecutive blank lines outside of code samples. A single blank line is always enough in Markdown.
 
 ## Headings
+
 - Header text must use the `atx-style` with no closing `#` character.
 - Include a single space between the `#` and the text of the Header^[1](#1).
 
@@ -21,8 +24,7 @@ This document contains formatting standards for creating readable, consistent fi
   ```
 
 - Headers spanning more than 80 characters should be re-evaluated.
-- Headers must be preceded a newline except at the beginning of a file.
-- Headers should not be followed by a newline unless the element following it requires a preceding newline
+- Headers must be preceded by a newline (except at the beginning of a document) and followed by a newline always.
 - The first header in a file should be an `h1`.
 - Headers should never increase by more than one "level" from one header to the next. Think of higher-level headers as though they are nested within their parent, forming a hierarchy like the Table of Contents.
 
@@ -43,6 +45,7 @@ This document contains formatting standards for creating readable, consistent fi
   ```
 
 ## Horizontal Rules
+
 The convention for horizontal rules in this style guide is to use hyphens (instead of asterisks or underscores). Horizontal rules should span 80 characters for readability.
 
 ```markdown
@@ -50,23 +53,27 @@ The convention for horizontal rules in this style guide is to use hyphens (inste
 ```
 
 ## Lists
+
 - Unordered lists are denoted with a `-` (a hyphen and a space). Hyphens tend to be consistent across monospace fonts (being displayed at half of the line height) and seem to be the most common "list character" anyway.
 - Nested list items must be indented 2 spaces further than their parent.
 
   ```markdown
   This is arbitrary text, an unordered list begins on the next line.
+
   - list item 1
   - list item 2
+
     - sub-list item
   ```
 
-- Lists should not be preceded by a newline, unless it follows an item that needs a newline after it (like code or another list).
-- Lists must be followed by newlines.
+- Lists must be preceded by a newline (except at the beginning of a document) and followed by a newline always.
 
   ```markdown
   This text precedes a list of things.
+
   - list item 1
   - list item 2
+
     1. sub-list item 1
     2. sub-list item 2
 
@@ -77,6 +84,7 @@ The convention for horizontal rules in this style guide is to use hyphens (inste
   ```
 
 ## Code
+
 - **Inline code** must use single backticks and must not have spaces between the backtick characters and the code.
 
   ```markdown
@@ -106,6 +114,7 @@ The convention for horizontal rules in this style guide is to use hyphens (inste
 - As long as the parser supports it; code blocks should not be denoted with indentation. Using back-ticks is much more explicit than 4 spaces or 1 tab.
 
 ## Tables
+
 Like fenced code blocks, tables in Markdown are provided by [Markdown Extra](https://en.wikipedia.org/wiki/Markdown_Extra) which seems to be pretty widely implemented.
 
 - Pipe characters must be preceded and followed by spaces for readability.
@@ -114,6 +123,7 @@ Like fenced code blocks, tables in Markdown are provided by [Markdown Extra](htt
 
   ```markdown
   # This is completely unreadable, although it is technically valid.
+
   table header | other table header
   --- | ---
   table data | other table data
@@ -129,7 +139,8 @@ Like fenced code blocks, tables in Markdown are provided by [Markdown Extra](htt
 
 - Tables must always be preceded and followed by newlines.
 
-### Table example:
+### Table example
+
 _This table meets all the criteria:_
 
 ```markdown
@@ -149,4 +160,5 @@ Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 ## Footnotes
+
 1. <a name="1"></a> This is enforced locally through redcarpet2's configuration: `:space_after_headers`.
